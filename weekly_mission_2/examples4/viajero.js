@@ -7,7 +7,7 @@ export default class Viajero extends Explorer {
   }
 
   getGeneralInfo() {
-    let nameAndUsername = this.getNameAndUsername();
+    let nameAndUsername = this.getNameAndUsername(); //Este método es de la clase padre
     return `${nameAndUsername}, Ciclo ${this.cycle}`;
   }
 }
