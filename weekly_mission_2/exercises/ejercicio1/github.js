@@ -14,8 +14,8 @@ const repo = {
     return `This repository ${this.name} was created by ${this.author}`;
   },
   issue: {
-    title: "First issue",
-    repositoryNameAssociated: repo.name,
+    titleIssue: "First issue",
+    repositoryNameAssociated: this.name,
     status: "open",
     numberOfComments: 15,
     labels: ["issue", "help", "advice"],
@@ -35,11 +35,11 @@ const repo = {
     },
   },
   pullRequest: {
-    title: "First PR",
+    titlePR: "First PR",
     branchName: "main",
     dateCreated: "22-04-2022",
     status: "open",
-    repositoryNameAssosiated: repo.name,
+    repositoryNameAssosiated: this.name,
     getStatus: function () {
       return this.status;
     },
@@ -51,7 +51,8 @@ const repo = {
   },
 };
 
+console.log(repo);
 console.log("Nombre del repo:" + repo.name);
 console.log("Issues totales: " + repo.getTotalIssues());
 console.log(repo.getGeneralInfo());
-console.log(issue.getGeneralInfo());
+console.log(repo.issue.getGeneralInfo());
